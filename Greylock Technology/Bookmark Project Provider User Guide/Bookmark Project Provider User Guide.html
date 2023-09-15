@@ -25,15 +25,15 @@ w\:* {behavior:url(#default#VML);}
   <o:Author>Chris Roebuck</o:Author>
   <o:LastAuthor>Chris Roebuck</o:LastAuthor>
   <o:Revision>2</o:Revision>
-  <o:TotalTime>19</o:TotalTime>
-  <o:Created>2021-07-16T11:33:00Z</o:Created>
-  <o:LastSaved>2021-07-16T11:33:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>1037</o:Words>
-  <o:Characters>5917</o:Characters>
-  <o:Lines>49</o:Lines>
-  <o:Paragraphs>13</o:Paragraphs>
-  <o:CharactersWithSpaces>6941</o:CharactersWithSpaces>
+  <o:TotalTime>17</o:TotalTime>
+  <o:Created>2023-09-14T14:53:00Z</o:Created>
+  <o:LastSaved>2023-09-14T14:53:00Z</o:LastSaved>
+  <o:Pages>8</o:Pages>
+  <o:Words>1270</o:Words>
+  <o:Characters>7239</o:Characters>
+  <o:Lines>60</o:Lines>
+  <o:Paragraphs>16</o:Paragraphs>
+  <o:CharactersWithSpaces>8493</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -682,7 +682,7 @@ href="Bookmark%20Project%20Provider%20User%20Guide.fld/colorschememapping.xml">
 	mso-font-charset:0;
 	mso-generic-font-family:roman;
 	mso-font-pitch:variable;
-	mso-font-signature:3 0 0 0 1 0;}
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
 @font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
@@ -973,6 +973,9 @@ span.Heading2Char
 	color:#2F5496;
 	mso-themecolor:accent1;
 	mso-themeshade:191;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
 span.GramE
 	{mso-style-name:"";
 	mso-gram-e:yes;}
@@ -988,6 +991,8 @@ span.GramE
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:0pt;
+	mso-ligatures:none;
 	mso-fareast-language:EN-US;}
  /* Page Definitions */
  @page
@@ -1433,12 +1438,14 @@ bookmark into the text entry window at the current cursor position.</p>
 
 <p class=MsoNormal>When you are done editing the bookmark text, click ‘Create
 Bookmark’ to place a free label on the selected VI(s) block diagram or use the
-keyboard combination Ctrl + Enter</p>
+keyboard combination Ctrl + Enter. The bookmark will be placed as the upper
+leftmost item on the target block diagram unless a custom location has been
+defined in the preferences dialog.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
 <p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
-style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_11"
+class=SpellE><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_11"
  o:spid="_x0000_i1029" type="#_x0000_t75" alt="A picture containing clock&#10;&#10;Description automatically generated"
  style='width:323pt;height:67pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="Bookmark%20Project%20Provider%20User%20Guide.fld/image007.jpg"
@@ -1446,10 +1453,10 @@ style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_11"
 </v:shape><![endif]--><![if !vml]><img width=323 height=67
 src="Bookmark%20Project%20Provider%20User%20Guide.fld/image007.jpg"
 alt="A picture containing clock&#10;&#10;Description automatically generated"
-v:shapes="Picture_x0020_11"><![endif]></span></p>
+v:shapes="Picture_x0020_11"><![endif]></span></span></p>
 
-<p class=MsoCaption align=center style='text-align:center'>Figure <!--[if supportFields]><span
-style='mso-element:field-begin'></span><span
+<p class=MsoCaption align=center style='text-align:center'><span class=SpellE>Fig</span>ure
+<!--[if supportFields]><span style='mso-element:field-begin'></span><span
 style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC <span style='mso-element:
 field-separator'></span><![endif]--><span style='mso-no-proof:yes'>6</span><!--[if supportFields]><span
 style='mso-no-proof:yes'><span style='mso-element:field-end'></span></span><![endif]-->-Free
@@ -1661,9 +1668,27 @@ class=GramE>1,#</span>ExampleBookmark2<o:p></o:p></b></p>
 
 <p class=MsoNormal>You can invoke the New Bookmark editor by launching Quick
 Drop from the Block Diagram using the <b>Ctrl + Space </b>key combination
-immediately followed by <b>Ctrl + M</b></p>
+immediately followed by <b>Ctrl + <span class=GramE>M</span><o:p></o:p></b></p>
+
+<p class=MsoNormal><b><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal>If an existing free text label is selected at the time of
+invocation of the Quick Drop shortcut, then the text from that label will automatically
+be placed into the bookmark editor ready for alteration or replacement.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>When launched from Quick Drop the Bookmark editor allows deferred
+placement of a new bookmark by placing the Bookmark on the cursor awaiting the
+user to click the target location on the block diagram rather than in the
+Default location (or static custom location specified in preferences). The user
+can click the block diagram to select the desired position or click Esc to
+cancel bookmark placement.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>To defer bookmark placement the user should complete the
+bookmark text in the editor and then click <b>Ctrl + <span class=GramE>M</span><o:p></o:p></b></p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -1741,7 +1766,30 @@ utilities we have planned at Greylock Technology”<o:p></o:p></i></p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal><span style='font-size:18.0pt'>Appendix: System Requirements<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:18.0pt'>Appendix A: 3<sup>rd</sup>
+party content<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:18.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal>The installation package for The Bookmark Project Provider replaces
+a VI in VI.lib with an alternative provided by National Instruments in a public
+forum as mitigation for a Right-Click Menu Bug. Read more about this bug and
+its’ mitigation here:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><a
+href="https://forums.ni.com/t5/LabVIEW-Shortcut-Menu-Plug-Ins/Bug-Fix-for-ALL-Right-Click-Menu-Plug-Ins-LV2015-to-2019/ta-p/4016064?profile.language=en">https://forums.ni.com/t5/LabVIEW-Shortcut-Menu-Plug-Ins/Bug-Fix-for-ALL-Right-Click-Menu-Plug-Ins-LV2015-to-2019/ta-p/4016064?profile.language=en</a></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>This VI was included in the package with the kind permission
+of National Instruments.</p>
+
+<p class=MsoNormal><span style='font-size:18.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:18.0pt'>Appendix B: System
+Requirements<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:18.0pt'><o:p>&nbsp;</o:p></span></p>
 
